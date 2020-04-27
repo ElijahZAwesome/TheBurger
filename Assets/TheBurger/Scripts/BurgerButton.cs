@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BurgerButton : MonoBehaviour {
+public class BurgerButton : MonoBehaviour
+{
+    public BurgerIcons.Ingredient thisIngredient;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField]
+    private MeshRenderer IconMesh;
+    [SerializeField]
+    private MeshRenderer LEDMeshRenderer;
+
+    public void SetIcon(BurgerIcons.Ingredient ingredient)
+    {
+        thisIngredient = ingredient;
+        IconMesh.material.mainTexture = BurgerIcons.Instance.IngredientIcons[(int) ingredient];
+    }
+
 }
