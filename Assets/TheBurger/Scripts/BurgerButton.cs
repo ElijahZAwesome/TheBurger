@@ -17,4 +17,14 @@ public class BurgerButton : MonoBehaviour
         IconMesh.material.mainTexture = BurgerIcons.Instance.IngredientIcons[(int) ingredient];
     }
 
+    public void SetState(bool correct, bool off = false)
+    {
+        if (off)
+        {
+            LEDMeshRenderer.material.color = BurgerColors.Off;
+            return;
+        }
+        LEDMeshRenderer.material.color = correct ? BurgerColors.Correct : BurgerColors.Wrong;
+    }
+
 }

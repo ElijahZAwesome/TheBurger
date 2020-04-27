@@ -2255,6 +2255,7 @@ MonoBehaviour:
   - {fileID: 1235356391810984}
   - {fileID: 1175771005204012}
   ingredientOrder: 
+  orderIndex: 0
 --- !u!114 &114068490582684700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2329,7 +2330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisIngredient: 0
   IconMesh: {fileID: 23870237257479122}
-  LEDMeshRenderer: {fileID: 0}
+  LEDMeshRenderer: {fileID: 23856606629921652}
 --- !u!114 &114142188206522680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2395,7 +2396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisIngredient: 0
   IconMesh: {fileID: 23217692759909334}
-  LEDMeshRenderer: {fileID: 0}
+  LEDMeshRenderer: {fileID: 23958629911488666}
 --- !u!114 &114258794202293450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2576,7 +2577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisIngredient: 0
   IconMesh: {fileID: 23413657446502234}
-  LEDMeshRenderer: {fileID: 0}
+  LEDMeshRenderer: {fileID: 23082408672546234}
 --- !u!114 &114535248339848882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2730,7 +2731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisIngredient: 0
   IconMesh: {fileID: 23788944308283710}
-  LEDMeshRenderer: {fileID: 0}
+  LEDMeshRenderer: {fileID: 23241752134437598}
 --- !u!114 &114787654979199008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2856,7 +2857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisIngredient: 0
   IconMesh: {fileID: 23393965024020760}
-  LEDMeshRenderer: {fileID: 0}
+  LEDMeshRenderer: {fileID: 23333604228457602}
 --- !u!114 &114938577327171888
 MonoBehaviour:
   m_ObjectHideFlags: 1

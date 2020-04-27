@@ -26,6 +26,7 @@ public class BurgerModule : MonoBehaviour
 	/// E.G no buttons pressed = 0
 	/// all buttons pressed = 4
 	/// </summary>
+	[SerializeField]
     private int orderIndex = 0;
 
     private int currentStrikes = 0;
@@ -52,29 +53,49 @@ public class BurgerModule : MonoBehaviour
 
     private void ButtonPressed(BurgerButton button)
     {
+        Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
+        if (ingredientOrder.IndexOf(button.thisIngredient) < orderIndex) return;
         if (ingredientOrder[orderIndex] == button.thisIngredient)
         {
+            button.SetState(true);
+            SetIndicator(orderIndex, BurgerColors.IngredientColors[(int)ingredientOrder[orderIndex]]);
             orderIndex++;
+            if (orderIndex >= ingredientOrder.Count) Module.HandlePass();
         }
         else
         {
-			Module.HandleStrike();
+            Module.HandleStrike();
+            button.SetState(false);
         }
+    }
+
+    private void ResetModule()
+    {
+        for (int i = 0; i < ingredientOrder.Count; i++)
+        {
+            buttons[i].GetComponent<BurgerButton>().SetIcon(ingredientOrder[i]);
+            buttons[i].GetComponent<BurgerButton>().SetState(false, true);
+            SetIndicator(i, BurgerColors.Off);
+        }
+
+        SortOrder();
     }
 
     private void GenerateOrder()
     {
 		ingredientOrder = new List<Ingredient>();
-		List<KMSelectable> unsetButtons = new List<KMSelectable>(buttons);
         for (int i = 0; i < buttons.Length; i++)
         {
 			NewIngredient();
-            int btnIndex = Random.Range(0, unsetButtons.Count);
-			buttons[btnIndex].GetComponent<BurgerButton>().SetIcon(ingredientOrder[i]);
-			unsetButtons.RemoveAt(0);
+			buttons[i].GetComponent<BurgerButton>().SetIcon(ingredientOrder[i]);
         }
 
-        ingredientOrder = ingredientOrder.OrderBy(GetIngredientOrder).ToList();
+        SortOrder();
+    }
+
+    private void SortOrder()
+    {
+        ingredientOrder = ingredientOrder.OrderBy(GetIngredientValue).ToList();
     }
 
     private void NewIngredient()
@@ -85,7 +106,12 @@ public class BurgerModule : MonoBehaviour
 		else NewIngredient();
     }
 
-    private float GetIngredientOrder(Ingredient ingredient)
+    private void SetIndicator(int index, Color color)
+    {
+        ProgressLEDS[index].GetComponent<MeshRenderer>().material.color = color;
+    }
+
+    private float GetIngredientValue(Ingredient ingredient)
     {
         switch (ingredient)
         {
@@ -131,7 +157,7 @@ public class BurgerModule : MonoBehaviour
         if (currentStrikes != Bomb.GetStrikes())
         {
             currentStrikes = Bomb.GetStrikes();
-            GenerateOrder();
+            SortOrder();
         }
     }
 }

@@ -18,15 +18,19 @@ public class BurgerColors
         Color.red / 2, // Bacon
         Color.grey, // Mushroom
         Color.white * 0.75f, // Onion Ring
-        new Color(255, 212, 94), // Bun
-        new Color(255, 165, 0), // Cheddar
-        new Color(237, 237, 237), // Swiss
-        new Color(237, 237, 237), // PepperJack
+        UnnormalizedColor(255, 212, 94), // Bun
+        UnnormalizedColor(255, 165, 0), // Cheddar
+        UnnormalizedColor(237, 237, 237), // Swiss
+        UnnormalizedColor(237, 237, 237), // PepperJack
         Color.white, // Mayo
         Color.yellow, // Mustard
         Color.red, // Ketchup
-        new Color(59, 14, 22), // Barbeque sauce
-        new Color(100 * Random.value,
-            100 * Random.value, 100 * Random.value), // Mystery Sauce
+        UnnormalizedColor(59, 14, 22), // Barbeque sauce
+        new Color(Random.value, Random.value, Random.value), // Mystery Sauce
     };
+
+    public static Color UnnormalizedColor(float r, float g, float b)
+    {
+        return new Color(r / 255, g / 255, b / 255);
+    }
 }
