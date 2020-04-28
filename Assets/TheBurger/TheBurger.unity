@@ -259,6 +259,81 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: f05b9699b65c17d4e81f755ead91dd17, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[2]
+      value: 
+      objectReference: {fileID: 2800000, guid: aa04766c752cd02449d7e6ea69f47337, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[3]
+      value: 
+      objectReference: {fileID: 2800000, guid: 32e0e18a857dec24289676890070365b, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[4]
+      value: 
+      objectReference: {fileID: 2800000, guid: 88a0e23379e3df747a58bb8ea8d6350c, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[5]
+      value: 
+      objectReference: {fileID: 2800000, guid: f76e23097cfc3814ebca635f3521b377, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[6]
+      value: 
+      objectReference: {fileID: 2800000, guid: 17e9d90dd564d59418d669a5e8c3147f, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[7]
+      value: 
+      objectReference: {fileID: 2800000, guid: 629ae80a1111ec74ca464a96fd734042, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[8]
+      value: 
+      objectReference: {fileID: 2800000, guid: 52d4f382d0deff84daa19ba91a67fe25, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[9]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4e93e4e9ff1de9646a9ca09b9c695d27, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[10]
+      value: 
+      objectReference: {fileID: 2800000, guid: b4a6f69b230d23c48ace6e936d20cef6, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[11]
+      value: 
+      objectReference: {fileID: 2800000, guid: a8e703c4769ca3549a6da36cbfb7da97, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[12]
+      value: 
+      objectReference: {fileID: 2800000, guid: c27501c848057fc4b8d84916dde9a5e0, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[13]
+      value: 
+      objectReference: {fileID: 2800000, guid: c67492d28867df644b286ae0ccb9fef4, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[14]
+      value: 
+      objectReference: {fileID: 2800000, guid: 85dc093209ef16f4a8b9872a8ca653ba, type: 3}
+    - target: {fileID: 114365829514950074, guid: 1e1978d7efe18cc498777e1ba443a6f7,
+        type: 2}
+      propertyPath: IngredientIcons.Array.data[15]
+      value: 
+      objectReference: {fileID: 2800000, guid: 66e120e908cf5074b8dd32f7c43989c9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e1978d7efe18cc498777e1ba443a6f7, type: 2}
   m_IsPrefabParent: 0

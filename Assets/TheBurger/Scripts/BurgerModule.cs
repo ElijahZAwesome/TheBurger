@@ -71,9 +71,13 @@ public class BurgerModule : MonoBehaviour
 
     private void ResetModule()
     {
+        orderIndex = 0;
+        List<KMSelectable> unsetButtons = new List<KMSelectable>(buttons);
         for (int i = 0; i < ingredientOrder.Count; i++)
         {
-            buttons[i].GetComponent<BurgerButton>().SetIcon(ingredientOrder[i]);
+            int randomBtn = Random.Range(0, unsetButtons.Count);
+            unsetButtons[randomBtn].GetComponent<BurgerButton>().SetIcon(ingredientOrder[i]);
+            unsetButtons.RemoveAt(randomBtn);
             buttons[i].GetComponent<BurgerButton>().SetState(false, true);
             SetIndicator(i, BurgerColors.Off);
         }
@@ -84,10 +88,13 @@ public class BurgerModule : MonoBehaviour
     private void GenerateOrder()
     {
 		ingredientOrder = new List<Ingredient>();
+        List<KMSelectable> unsetButtons = new List<KMSelectable>(buttons);
         for (int i = 0; i < buttons.Length; i++)
         {
 			NewIngredient();
-			buttons[i].GetComponent<BurgerButton>().SetIcon(ingredientOrder[i]);
+            int randomBtn = Random.Range(0, unsetButtons.Count);
+			unsetButtons[randomBtn].GetComponent<BurgerButton>().SetIcon(ingredientOrder[i]);
+            unsetButtons.RemoveAt(randomBtn);
         }
 
         SortOrder();
@@ -136,7 +143,7 @@ public class BurgerModule : MonoBehaviour
             case Ingredient.Swiss:
                 return Bomb.GetBatteryCount() + 0.09f;
             case Ingredient.PepperJack:
-                return Bomb.CountDuplicatePorts() + 0.10f;
+                return Bomb.GetPorts().Count() + 0.10f;
             case Ingredient.Mayo:
                 return Bomb.GetSerialNumberNumbers().Sum() + 0.11f;
             case Ingredient.Mustard:
@@ -157,7 +164,7 @@ public class BurgerModule : MonoBehaviour
         if (currentStrikes != Bomb.GetStrikes())
         {
             currentStrikes = Bomb.GetStrikes();
-            SortOrder();
+            ResetModule();
         }
     }
 }
